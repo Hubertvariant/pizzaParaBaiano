@@ -1,0 +1,380 @@
+/* =============================== */
+/* I. Configuração Global e Reset (Tema Claro) */
+/* =============================== */
+
+:root {
+  /* Cores - PALETA VIVA E CLARA */
+  --color-primary: #ff5722; /* Laranja VIVO (Destaque, Botões) */
+  --color-secondary: #ff9800; /* Laranja Médio (Acentos) */
+  --color-background-light: #f5f5f5; /* Fundo Principal Claro (Bege/Cinza Claro) */
+  --color-background-white: #ffffff; /* Fundo Secundário (Branco puro) */
+  --color-text-dark: #212121; /* Texto Principal Escuro */
+  --color-text-subtle: #616161; /* Texto Secundário */
+  --color-border-light: #e0e0e0; /* Borda leve */
+  
+  /* Tipografia */
+  --font-family-default: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-size-base: 16px;
+
+  /* Espaçamento */
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-default);
+  color: var(--color-text-dark);
+  background-color: var(--color-background-light); 
+  line-height: 1.6;
+}
+
+/* =============================== */
+/* II. Cabeçalho (Design Claro e Fixo) */
+/* =============================== */
+
+header {
+  background-color: var(--color-background-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-bottom: 3px solid var(--color-primary); /* Linha de acento */
+}
+
+.logo {
+  height: 60px;
+}
+
+nav a {
+  color: var(--color-text-subtle);
+  margin-left: var(--spacing-lg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* =============================== */
+/* III. Seção Hero (Fundo de Destaque) */
+/* =============================== */
+
+.hero {
+  text-align: center;
+  padding: 150px var(--spacing-md); 
+  background-color: var(--color-secondary); /* Fundo Laranja para destaque */
+  color: var(--color-background-white); /* Texto branco no fundo laranja */
+}
+
+.hero h1 {
+  font-size: 3.8rem; 
+  color: var(--color-background-white);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.order-button {
+  background-color: var(--color-background-white); /* Botão branco */
+  color: var(--color-primary); /* Texto laranja */
+  padding: 14px 35px;
+  border: 2px solid var(--color-primary); /* Borda para definição */
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 50px; 
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: var(--color-primary); /* Inverte as cores no hover */
+  color: var(--color-background-white);
+  transform: translateY(-2px); 
+}
+
+/* =============================== */
+/* IV. Galeria (Design de Cartões no Fundo Claro) */
+/* =============================== */
+
+.galeria {
+  padding: 80px var(--spacing-md);
+  background-color: var(--color-background-white); 
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.imagens img {
+  width: 100%;
+  max-width: 300px; 
+  aspect-ratio: 4/3; 
+  object-fit: cover; 
+  border-radius: 12px; /* Mais arredondado */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra mais leve */
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 3px solid var(--color-border-light);
+}
+
+.imagens img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  border-color: var(--color-secondary);
+}
+
+/* =============================== */
+/* V. Cardápio (Menu - Design de Cartões) */
+/* =============================== */
+
+.menu {
+  padding: 80px var(--spacing-md);
+  background-color: var(--color-background-light); /* Fundo sutil */
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border-light);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px auto; 
+  color: var(--color-text-subtle);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-md);
+}
+
+.pizza {
+  background-color: var(--color-background-white);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  color: var(--color-text-dark);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left; 
+  border: 1px solid var(--color-border-light);
+}
+
+.pizza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.pizza h3 {
+    color: var(--color-primary);
+    margin-top: var(--spacing-sm);
+}
+
+.pizza img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.pizza-description {
+  margin: 10px 0 15px 0;
+  color: var(--color-text-subtle);
+  font-size: 0.95rem;
+  min-height: 40px; 
+}
+
+.pizza-price-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-border-light);
+}
+
+.pizza-price-action .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.mini-button {
+  background-color: var(--color-primary);
+  color: var(--color-background-white);
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: none;
+}
+
+.mini-button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* =============================== */
+/* VI. Formulário de Contato (Utilidade/Fundo Claro) */
+/* =============================== */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-background-white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border-light);
+}
+
+.contact-form label {
+  display: block;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border-light);
+  border-radius: 5px;
+  background-color: var(--color-background-light); 
+  color: var(--color-text-dark);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  background-color: var(--color-background-white);
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.3);
+}
+
+.contact-form textarea {
+  resize: vertical; 
+}
+
+
+/* =============================== */
+/* VII. Rodapé (Footer - Claro com Linha de Destaque) */
+/* =============================== */
+
+footer {
+  background-color: var(--color-text-dark); /* Fundo escuro para contraste */
+  color: var(--color-background-light);
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 0.875rem;
+  border-top: 5px solid var(--color-primary);
+}
+
+/* =============================== */
+/* VIII. Media Queries (Responsividade) */
+/* =============================== */
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Layout Mobile */
+  
+  header {
+    flex-direction: column;
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+
+  nav {
+    margin-top: var(--spacing-md);
+  }
+  
+  nav a {
+    margin: 0 var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+    display: inline-block; 
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 50px;
+  }
+
+  .order-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .mini-button {
+    padding: 6px 12px;
+  }
+}
