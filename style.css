@@ -46,18 +46,12 @@ body {
 header {
   background-color: var(--color-background-white);
   padding: var(--spacing-md) var(--spacing-lg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
   border-bottom: 3px solid var(--color-primary); /* Linha de acento */
 }
 
 .logo {
-  height: 60px;
+  height: 260px;
 }
 
 nav a {
@@ -377,4 +371,5 @@ footer {
   .mini-button {
     padding: 6px 12px;
   }
+
 }
