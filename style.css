@@ -48,6 +48,7 @@ header {
   padding: var(--spacing-md) var(--spacing-lg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
   border-bottom: 3px solid var(--color-primary); /* Linha de acento */
+  text-align: center;
 }
 
 .logo {
