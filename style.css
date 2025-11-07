@@ -361,7 +361,7 @@ footer {
 
 @media (max-width: 480px) {
   .logo {
-    height: 50px;
+    height: 150px;
   }
 
   .order-button {
@@ -374,3 +374,4 @@ footer {
   }
 
 }
+
